@@ -7,7 +7,7 @@ services:
 
 script:
 #  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-  - docker build -t acd_cli .
+  - docker build -t kune/acd_cli .
   - docker images
 #  - if [ "$TRAVIS_BRANCH" == "master" ]; then
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
