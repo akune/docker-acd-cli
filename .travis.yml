@@ -6,9 +6,9 @@ services:
   - docker
 
 script:
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+#  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
   - docker build -t acd_cli .
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push kune/acd_cli;
-    fi
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+  - docker push kune/acd_cli;
+#    fi
